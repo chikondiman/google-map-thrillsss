@@ -8,3 +8,9 @@ const mapStyles = {
     height: '100%'
   }
 };
+
+export class CurrentLocation extends React.Component {
+    // ...
+  }
+  
+  export default CurrentLocation;
