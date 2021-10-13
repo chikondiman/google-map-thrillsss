@@ -10,7 +10,35 @@ const mapStyles = {
 };
 
 export class CurrentLocation extends React.Component {
-    // ...
+
+    
+  componentDidMount() {
+    if (this.props.centerAroundCurrentLocation) {
+      if (navigator && navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          const coords = pos.coords;
+          this.setState({
+            currentLocation: {
+              lat: coords.latitude,
+              lng: coords.longitude
+            }
+          });
+        });
+      }
+    }
+    this.loadMap();
+  }
+    recenterMap() {
+        const map = this.map;
+        const current = this.state.currentLocation;
+        const google = this.props.google;
+        const maps = google.maps;
+    
+        if (map) {
+          let center = new maps.LatLng(current.lat, current.lng);
+          map.panTo(center);
+        }
+      }
   }
   
   export default CurrentLocation;
