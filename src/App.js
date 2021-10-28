@@ -11,7 +11,7 @@ export class MapContainer extends Component {
   state = {
     showingInfoWindow: false,  
     activeMarker: {},          
-    selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
+    selectedPlace: {}       
   };
 
   onMarkerClick = (props, marker, e) =>
