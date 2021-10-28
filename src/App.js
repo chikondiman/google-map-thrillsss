@@ -10,7 +10,7 @@ export class MapContainer extends Component {
 
   state = {
     showingInfoWindow: false,  
-    activeMarker: {},          // Shows the active marker upon click
+    activeMarker: {},          
     selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
   };
 
