@@ -9,7 +9,7 @@ const mapStyles = {
 export class MapContainer extends Component {
 
   state = {
-    showingInfoWindow: false,  // Hides or shows the InfoWindow
+    showingInfoWindow: false,  
     activeMarker: {},          // Shows the active marker upon click
     selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
   };
@@ -44,7 +44,7 @@ export class MapContainer extends Component {
     >
       <Marker
         onClick={this.onMarkerClick}
-        name={'Kenyatta International Convention Centre'}
+        name={'Kenyatta International Convention Center'}
       />
       <InfoWindow
         marker={this.state.activeMarker}
